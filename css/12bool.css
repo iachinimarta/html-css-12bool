@@ -1,3 +1,9 @@
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -14,8 +20,14 @@
     flex-wrap: wrap;
 }
 
-[class*'col-'] {
+[class*='col-'] {
     flex: 0 0 auto;
+}
+
+.col {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
 }
 
 .col-1 {
@@ -77,8 +89,6 @@
     flex-basis: calc((100% / 12) * 12);
     max-width: calc((100% / 12) * 12);
 }
-
-/* ******************************************************* <- OFFSET */
 
 .col-offset-1 {
     margin-left: calc((100% / 12) * 1);
